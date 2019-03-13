@@ -1,0 +1,178 @@
+*{
+	box-sizing: border-box;
+}
+
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	background-color:white;
+	color: black;
+	text-align:center;
+	margin: 0;
+}
+
+
+#videoFondo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.container{
+	width: 100%;
+	height: 100%;
+	border: solid red 2px;
+}
+
+#botonPlay {
+	display: block;
+	margin-left: auto;
+	 margin-right: auto;
+  width: 7%;
+	position: absolute;
+	left: 50%;
+  top: 50%;
+	transform: translate(-50%,-50%);
+
+  cursor: pointer;
+	z-index: 1;
+}
+
+#botonCerrar{
+	display: block;
+	margin-left: auto;
+	 margin-right: auto;
+  width: 2%;
+	position: absolute;
+	left: 98%;
+  top: 2%;
+	transform: translate(-98%,-2%);
+
+  cursor: pointer;
+	z-index: 4;
+}
+
+#DemoReel {
+	display: block;
+	position: absolute;
+  left: 50%;
+  top: 50%;
+	transform: translate(-50%,-50%);
+
+  min-width: 85%;
+  min-height: 85%;
+}
+
+.content {
+  position: fixed;
+	right: 0;
+  top: 0;
+  min-width: 100%;
+  height: 10vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 1%;
+	z-index: 3;
+
+
+
+}
+
+a{
+	font: 20px/30px Helvetica, sans-serif;
+text-align: center;
+}
+
+.btn-group{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: space-around;
+	transform: translate(0%,50%);
+
+}
+
+
+
+
+.btn-group a {
+  background-color: grey;
+  border: 1px solid darkgrey;
+  color: white;
+	width: 15%;
+  text-decoration: none;
+  cursor: pointer;
+
+
+
+
+}
+
+
+.btn-group a:not(:last-child) {
+  border-right: none;
+}
+
+
+.btn-group a:hover {
+  background-color: darkgrey;
+}
+
+
+
+.capaAuxVideo{
+
+	position: absolute;
+  left: 50%;
+  top: 50%;
+	transform: translate(-50%,-50%);
+  min-width: 140vh;
+	height: 75%;
+	background-color: rgba(0,0,0,0.93);
+	display: none;
+	z-index: 3;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+	position: absolute;
+	left: 2%;
+  top: 98%;
+	transform: translate(-2%,-98%);
+	z-index: 3;
+
+
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+#container2{
+
+		width: 100%;
+		height: 100%;
+		border: solid red 2px;
+
+
+
+}

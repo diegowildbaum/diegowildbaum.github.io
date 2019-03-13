@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Portfolio</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link rel="stylesheet" href="estilos.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+			<meta charset="utf-8"/>
+
+			<script>
+
+				function abrir(){
+					document.getElementById('capaAuxVideo').style.display = "block";
+				}
+
+				function cerrar(){
+					document.getElementById('capaAuxVideo').style.display = "none";
+				}
+
+
+
+
+			</script>
+	</head>
+	<body>
+
+		<div class="content">
+			<div class="content">
+				<div class="btn-group">
+				 <a  href="#Inicio">Inicio</a>
+				 <a href="#Info">Info</a>
+				 <a href="#Contacto">Contacto</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div name="Inicio" class="container" id="container">
+			<div class="capavideo">
+
+
+				<video autoplay muted loop id="videoFondo">
+					<source src="Dynamic_Smear_4K_Motion_Background_Loop.mp4" type="video/mp4">
+				</video> -
+					<div >
+						<img id="botonPlay" src="Play.png" alt="Play Button" onclick="abrir();">
+					</div>
+	      <div class="capaAuxVideo" id="capaAuxVideo">
+						<video autoplay muted loop id="DemoReel">
+	 						<source src="footagecrate-4k-looping-sheen-hexagons-ripple-1-s.mp4" type="video/mp4">
+	 					</video>
+						<div >
+							<img id="botonCerrar" src="Cerrar.png" alt="Close Button" onclick="cerrar();">
+
+						</div>
+
+							<button id="myBtn" onclick="myFunction()">Pause</button>
+							<script>
+							var video = document.getElementById("DemoReel");
+							var btn = document.getElementById("myBtn");
+
+							function myFunction() {
+							  if (video.paused) {
+							    video.play();
+							    btn.innerHTML = "Pause";
+							  } else {
+							    video.pause();
+							    btn.innerHTML = "Play";
+							  }
+							}
+
+						</script>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div id="container">
+			<div class="section1">
+					 <h1><a name="Info">Info</a></h1>
+				 <p>My name is Diego, I study 3D animation in U-tad.</p>
+			</div>
+
+			<div class="section1">
+				 <h1><a name="Contacto">Contacto</a></h1>
+				 <p>Lorem ipsum dolor sit amet...</p>
+			</div>
+		</div>
+	</body>
+</html>
