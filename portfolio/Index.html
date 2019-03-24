@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
 			<title>Portfolio</title>
+
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<link rel="stylesheet" href="estilos.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+			<link rel="stylesheet" href="estilos.css" />
 			<meta charset="utf-8"/>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 			<script>
 
@@ -20,70 +22,127 @@
 
 
 			</script>
+
 	</head>
 	<body>
 
 		<div class="content">
-			<div class="content">
+
 				<div class="btn-group">
-				 <a  href="#Inicio">Inicio</a>
+				 <a href="#container">Inicio</a>
 				 <a href="#Info">Info</a>
 				 <a href="#Contacto">Contacto</a>
-				</div>
+
 			</div>
 
 		</div>
 
-		<div name="Inicio" class="container" id="container">
+		<div  class="container" id="container">
 			<div class="capavideo">
 
 
 				<video autoplay muted loop id="videoFondo">
-					<source src="Dynamic_Smear_4K_Motion_Background_Loop.mp4" type="video/mp4">
-				</video> -
+					<source src="fondo.mp4" type="video/mp4">
+				</video>
 					<div >
-						<img id="botonPlay" src="Play.png" alt="Play Button" onclick="abrir();">
+						<i id="botonPlay" class="fas fa-play-circle" onclick="abrir();"></i>
 					</div>
 	      <div class="capaAuxVideo" id="capaAuxVideo">
-						<video autoplay muted loop id="DemoReel">
-	 						<source src="footagecrate-4k-looping-sheen-hexagons-ripple-1-s.mp4" type="video/mp4">
+						<video autoplay muted loop class="Demo" id="DemoReel">
+	 						<source src="Demo-Reel.mp4" type="video/mp4">
+	 					</video>
+						<video autoplay muted loop  class="Demo" id="Video2">
+	 						<source src="videoplayback.mp4" type="video/mp4">
 	 					</video>
 						<div >
-							<img id="botonCerrar" src="Cerrar.png" alt="Close Button" onclick="cerrar();">
+							<i id="botonCerrar" class="far fa-times-circle" onclick="cerrar();"></i>
 
 						</div>
 
-							<button id="myBtn" onclick="myFunction()">Pause</button>
+							<i id="myBtn" class="far fa-play" onclick="myFunction()"></i>
+
 							<script>
+
 							var video = document.getElementById("DemoReel");
 							var btn = document.getElementById("myBtn");
 
 							function myFunction() {
 							  if (video.paused) {
 							    video.play();
-							    btn.innerHTML = "Pause";
+							    btn.className = "far fa-play";
 							  } else {
 							    video.pause();
-							    btn.innerHTML = "Play";
+							    btn.className = "far fa-pause";
 							  }
 							}
 
 						</script>
 
+
+						<div class="btn1">
+							<a  onclick="abrir2();">Animacion</a>
+							<script>
+								function abrir2(){
+									document.getElementById('Video2').style.display = "none";
+									document.getElementById('DemoReel').style.display = "block";
+								}
+							</script>
+
+							<a  onclick="abrir1();">Modelado</a>
+							<script>
+								function abrir1(){
+									document.getElementById('DemoReel').style.display = "none";
+									document.getElementById('Video2').style.display = "block";
+								}
+							</script>
+
+						</div>
 				</div>
 
 			</div>
 
 		</div>
-		<div id="container">
-			<div class="section1">
-					 <h1><a name="Info">Info</a></h1>
-				 <p>My name is Diego, I study 3D animation in U-tad.</p>
+		<div id="cajas">
+			<div class="container1">
+				<div class="section1" id="Info">
+						 <h1>Info</h1>
+					 <p>My name is Diego, I study 3D animation in U-tad...</p>
+				</div>
 			</div>
+			<div class="container1">
+				<div class="section1" id="Contacto">
+					 <h1>Contacto:</h1>
+					 	<form action="mailto:diegowildbaum1@gmail.com" method="post" enctype="text/plain">
+						 <fieldset>
+							 <label>Nombre </label>
+							 <input type="text" name="nombre" size="50" placeholder="Nombre" required/>
+							 <br>
+							 <br>
+							 <label>Apellido </label>
+							 <input type="text" name="apellido" size="50" placeholder="Apellido" required/>
+							 <br>
+							 <br>
+							 <label>Email </label>
+							 <input type="email" name="email" required/>
+							 <br>
+							 <br>
+							 <label>Teléfono </label>
+							 <input type="number" name="numtlf" size="20" placeholder="91919191"/>
+							 <br>
+							 <br>
+							 <label>Mensaje </label>
+							 <input type="text" name="mensaje" required/>
+							 <br>
+							 <br>
+							 <input type="submit" value="Send"/>
+							 <input type="reset" value="borrar"/>
 
-			<div class="section1">
-				 <h1><a name="Contacto">Contacto</a></h1>
-				 <p>Lorem ipsum dolor sit amet...</p>
+							</fieldset>
+						</form>
+				</div>
+				<div>
+					<a href="https://es.linkedin.com/in/diego-wildbaum-usterman-5b93a1173"><i class="fab fa-linkedin" id="linkedin"></i></a>
+				</div>
 			</div>
 		</div>
 	</body>
